@@ -38,13 +38,18 @@
 import { Routes, Route } from "react-router-dom";
 // import Login from "./Auth/Login";
 import Login from "./Auth/login"
+ import Signup from "./Auth/signup"; // uncomment after you create Signup
+
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
+       <Route path="/signup" element={<Signup />} /> 
     </Routes>
   );
 }
 
 export default App;
+
+
