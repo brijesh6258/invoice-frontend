@@ -1,71 +1,3 @@
-// import { useState } from "react";
-// import axios from "../Apis/axiosConfig";
-// import { useNavigate } from "react-router-dom";
-
-// function Signup() {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-//   const [confirmPassword, setConfirmPassword] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleSignup = async (e) => {
-//     e.preventDefault();
-
-//     if (password !== confirmPassword) {
-//       alert("Passwords do not match");
-//       return;
-//     }
-
-//     try {
-//       await axios.post("/auth/signup", {
-//         username,
-//         password,
-//       });
-//       alert("Signup successful");
-//       navigate("/");
-//     } catch (err) {
-//       alert("Signup failed");
-//     }
-//   };
-
-//   return (
-//     <div className="signup-page">
-//       <h1 className="signup-title">Signup</h1>
-
-//       <form className="signup-form" onSubmit={handleSignup}>
-//         <label>Username</label>
-//         <input
-//           value={username}
-//           onChange={(e) => setUsername(e.target.value)}
-//         />
-
-//         <label>Password</label>
-//         <input
-//           type="password"
-//           value={password}
-//           onChange={(e) => setPassword(e.target.value)}
-//         />
-
-//         <label>Confirm Password</label>
-//         <input
-//           type="password"
-//           value={confirmPassword}
-//           onChange={(e) => setConfirmPassword(e.target.value)}
-//         />
-
-//         <button type="submit">Signup</button>
-
-//         <p className="login-link">
-//           Already have an account?{" "}
-//           <span onClick={() => navigate("/")}>Login</span>
-//         </p>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Signup;
-
 import { useState } from "react";
 import axios from "../Apis/axiosConfig";
 import { useNavigate } from "react-router-dom";
@@ -100,7 +32,7 @@ function Signup() {
     <div className="auth-container">
       <div className="auth-card">
         <h1 className="brand-title">Baghel Agency</h1>
-        <h2>Create Account</h2>
+        <h2 className="createAccount">Create Account</h2>
         <p className="subtitle">Signup to manage your inventory</p>
 
         <form onSubmit={handleSignup}>
